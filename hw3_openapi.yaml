@@ -1,0 +1,59 @@
+swagger: "2.0"
+info:
+  title: HW3APIGateway
+  description: API for Homework 3.
+  version: 1.0.0
+
+host: hw3apigatewat.apigateway.hw-3-418023.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+
+  /add:
+    post:
+      operationId: addition
+      summary: add two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw-3-418023.cloudfunctions.net/add
+  /sub:
+    post:
+      operationId: subtraction
+      summary: subtract two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw-3-418023.cloudfunctions.net/sub
+  /mul:
+    post:
+      operationId: multiplication
+      summary: multiply two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw-3-418023.cloudfunctions.net/mul
+  /div:
+    post:
+      operationId: division
+      summary: divide two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw-3-418023.cloudfunctions.net/div
+  
